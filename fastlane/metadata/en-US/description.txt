@@ -1,0 +1,20 @@
+Speed Test Stealth gives you a precise, no-nonsense measurement of your internet connection — download speed, upload speed, latency, and jitter — all powered by Cloudflare's global network.
+
+WHAT IT MEASURES
+• Download & Upload — tested across 14 progressive stages (100 KB → 250 MB) for accuracy at any connection tier
+• Ping (latency) — unloaded round-trip time to Cloudflare's edge
+• Jitter — consistency of your connection over time
+
+HOW IT WORKS
+The app uses the same measurement methodology as the Cloudflare Speed Test web app, running sequential payload stages that adapt to your connection's real capacity. Results are reported as 90th-percentile values, filtering out one-off spikes for a stable, representative number.
+
+NETWORK AWARENESS
+• Detects WiFi, 5G, 4G, 3G, and Ethernet automatically
+• Identifies your carrier on cellular connections
+• Shows your local IP address and approximate ISP location
+
+HISTORY
+Every test is saved locally on your device. Review past results by date, compare network types, and track how your connection changes over time.
+
+PRIVACY
+No account required. No data leaves your device except the speed-test payload traffic to Cloudflare's public endpoints. All history is stored on-device using Apple's SwiftData framework.

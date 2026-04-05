@@ -1,0 +1,1 @@
+bandwidth,ping,latency,jitter,network,5g,cellular,download,upload,connection,isp,performance,mbps

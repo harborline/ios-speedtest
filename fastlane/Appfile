@@ -1,0 +1,5 @@
+app_identifier("com.speedteststealth")
+apple_id("aloewright@gmail.com")
+
+itc_team_id("93438877")   # App Store Connect vendor/team number
+team_id("8SBK293L6F")     # Developer Portal team ID (from keychain cert)

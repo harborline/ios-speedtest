@@ -1,0 +1,1 @@
+Initial release — precise download, upload, ping, and jitter measurements powered by Cloudflare's speed test network.
