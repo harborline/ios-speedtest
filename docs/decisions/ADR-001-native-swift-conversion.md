@@ -54,7 +54,7 @@ Results use the 90th-percentile of all stage measurements, consistent with Cloud
 `project.yml` drives `.xcodeproj` generation, keeping the repo clean of Xcode-generated binary files and making CI setup trivial.
 
 ### Distribution — Fastlane
-`produce` → `match` → `gym` → `pilot`/`deliver` pipeline using App Store Connect API key (no password required, CI-safe). Bundle ID: `com.speedteststealth`.
+`produce` → `match` → `gym` → `pilot`/`deliver` pipeline using App Store Connect API key (no password required, CI-safe). Bundle ID: `com.speedy.speedtest`.
 
 ## Consequences
 

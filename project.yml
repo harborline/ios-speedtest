@@ -1,6 +1,6 @@
 name: SpeedTest
 options:
-  bundleIdPrefix: com.speedteststealth
+  bundleIdPrefix: com.speedy.speedtest
   deploymentTarget:
     iOS: "18.0"
   xcodeVersion: "26.0"
@@ -24,7 +24,7 @@ targets:
       - SpeedTest
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.speedteststealth
+        PRODUCT_BUNDLE_IDENTIFIER: com.speedy.speedtest
         INFOPLIST_FILE: SpeedTest/Info.plist
         TARGETED_DEVICE_FAMILY: "1"
 

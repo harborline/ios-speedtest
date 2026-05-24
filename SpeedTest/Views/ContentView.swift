@@ -17,6 +17,12 @@ struct ContentView: View {
                     Label("History", systemImage: "clock.fill")
                 }
                 .tag(1)
+
+            PrivacyPolicyView()
+                .tabItem {
+                    Label("Privacy", systemImage: "hand.raised.fill")
+                }
+                .tag(2)
         }
         .tint(.blue)
         .sensoryFeedback(.selection, trigger: selectedTab)

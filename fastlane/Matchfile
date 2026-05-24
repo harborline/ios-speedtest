@@ -3,5 +3,5 @@ git_url("https://github.com/aloewright/speedtest-certs")
 storage_mode("git")
 type("appstore")
 
-app_identifier(["com.speedteststealth"])
+app_identifier(["com.speedy.speedtest"])
 username("aloewright@gmail.com")

@@ -1,1 +1,1 @@
-https://github.com/aloewright/speedtest-native/issues
+https://github.com/aloewright/SpeedTest-Native/issues

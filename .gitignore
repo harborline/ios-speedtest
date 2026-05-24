@@ -1,0 +1,9 @@
+.DS_Store
+build/
+DerivedData/
+*.xcarchive
+*.ipa
+fastlane/AuthKey_*.p8
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/test_output/

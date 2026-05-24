@@ -1,21 +1,43 @@
 default_platform(:ios)
 
-BUNDLE_ID     = "com.speedteststealth"
+require "shellwords"
+
+PROJECT_ROOT = File.expand_path("..", __dir__)
+BUNDLE_ID     = "com.speedy.speedtest"
+APP_STORE_ID  = "6772637733"
 DEV_TEAM_ID   = "8SBK293L6F"   # Apple Development cert / project default
 DIST_TEAM_ID  = "95W8G892Z4"   # Apple Distribution cert + provisioning profiles
-KEY_PATH      = File.expand_path("../AuthKey_N3S3GACBN2.p8", __dir__)
-KEY_ID        = "N3S3GACBN2"
-ISSUER_ID     = "19f6fa40-e859-4234-a509-cb794faa464a"
+KEY_PATH      = ENV.fetch("APP_STORE_CONNECT_API_KEY_PATH", File.join(PROJECT_ROOT, "fastlane/AuthKey_N3S3GACBN2.p8"))
+KEY_ID        = ENV.fetch("APP_STORE_CONNECT_API_KEY_ID", "N3S3GACBN2")
+ISSUER_ID     = ENV.fetch("APP_STORE_CONNECT_ISSUER_ID", "19f6fa40-e859-4234-a509-cb794faa464a")
 
 platform :ios do
 
-  before_all do
+  before_all do |lane|
+    next unless [:certs, :build, :beta, :release].include?(lane)
+
+    UI.user_error!("Missing App Store Connect API key at #{KEY_PATH}") unless File.exist?(KEY_PATH)
+
     app_store_connect_api_key(
       key_id:       KEY_ID,
       issuer_id:    ISSUER_ID,
       key_filepath: KEY_PATH,
       in_house:     false
     )
+  end
+
+  private_lane :generate_project do
+    sh("cd #{PROJECT_ROOT.shellescape} && xcodegen generate")
+  end
+
+  lane :prepare do
+    generate_project
+    sh("cd #{PROJECT_ROOT.shellescape} && " \
+       "xcodebuild -project SpeedTest.xcodeproj " \
+       "-scheme SpeedTest " \
+       "-configuration Release " \
+       "-destination 'generic/platform=iOS' " \
+       "CODE_SIGNING_ALLOWED=NO build")
   end
 
   # ─── Ensure distribution cert is in keychain ────────────────────────────────
@@ -28,6 +50,7 @@ platform :ios do
 
   # ─── Build ──────────────────────────────────────────────────────────────────
   lane :build do
+    generate_project
     certs
 
     # Download & install App Store distribution provisioning profile
@@ -36,7 +59,7 @@ platform :ios do
       app_identifier: BUNDLE_ID,
       team_id:        DIST_TEAM_ID,
       output_path:    "/tmp/profiles",
-      filename:       "SpeedTestStealth_AppStore.mobileprovision"
+      filename:       "SpeedySpeedTest_AppStore.mobileprovision"
     )
     profile_uuid = ENV["SIGH_UUID"]
     UI.message("Using provisioning profile UUID: #{profile_uuid}")
@@ -47,17 +70,17 @@ platform :ios do
       0
     end
     increment_build_number(
-      xcodeproj:    "SpeedTest.xcodeproj",
+      xcodeproj:    File.join(PROJECT_ROOT, "SpeedTest.xcodeproj"),
       build_number: current_build + 1
     )
 
     gym(
-      project:          "SpeedTest.xcodeproj",
+      project:          File.join(PROJECT_ROOT, "SpeedTest.xcodeproj"),
       scheme:           "SpeedTest",
       configuration:    "Release",
       export_method:    "app-store",
-      output_directory: "./build",
-      output_name:      "SpeedTestStealth.ipa",
+      output_directory: File.join(PROJECT_ROOT, "build"),
+      output_name:      "SpeedySpeedTest.ipa",
       clean:            true,
       xcargs:           "CODE_SIGN_STYLE=Manual " \
                         "DEVELOPMENT_TEAM=#{DIST_TEAM_ID} " \
@@ -86,13 +109,36 @@ platform :ios do
   # ─── App Store ──────────────────────────────────────────────────────────────
   lane :release do
     build
+    review_information = {
+      first_name: "Harborline",
+      last_name: "Support",
+      phone_number: ENV.fetch("APP_REVIEW_PHONE", "+14158515000"),
+      email_address: "help@pdx.software",
+      notes: "Speed Test Stealth does not require an account, subscription, or in-app purchase. To test: open the app, tap Start Test, wait for the download, upload, latency, and jitter measurements to complete, then open the History tab to confirm the result was saved locally. The app sends speed-test payload traffic to Cloudflare speed test endpoints and sends the public IP address to FreeIPAPI to show approximate ISP/location context. Saved history remains on device."
+    }
+
     upload_to_app_store(
+      app:               APP_STORE_ID,
       app_identifier:    BUNDLE_ID,
-      metadata_path:     "./fastlane/metadata",
-      skip_screenshots:  true,
+      metadata_path:     File.join(PROJECT_ROOT, "fastlane/metadata"),
+      screenshots_path:  File.join(PROJECT_ROOT, "fastlane/screenshots"),
+      skip_screenshots:  false,
+      overwrite_screenshots: true,
       submit_for_review: true,
       automatic_release: false,
-      force:             true
+      copyright:         "2026 Harborline",
+      force:             true,
+      precheck_include_in_app_purchases: false,
+      app_review_information: review_information,
+      submission_information: {
+        add_id_info_serves_ads: false,
+        add_id_info_tracks_action: false,
+        add_id_info_tracks_install: false,
+        add_id_info_uses_idfa: false,
+        content_rights_contains_third_party_content: false,
+        content_rights_has_rights: false,
+        export_compliance_uses_encryption: false
+      }
     )
   end
 

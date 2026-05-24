@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		092EC1BCAEB135008CBD8B4E /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8361E3F41B02380EE7BDDB27 /* HistoryView.swift */; };
+		251ABE423830BB8E4FADB0F3 /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF58F28647A7E5DE615D67 /* NetworkInfo.swift */; };
+		3F9A23A09E806CBFB12764D7 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1442DAABCB6067D2FB879C89 /* PrivacyPolicyView.swift */; };
+		63D5A3359E652CAA380DAFCE /* SpeedTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4A1A3CC9C5D74A0EAC2F2 /* SpeedTestView.swift */; };
+		66DE61F42E3522EEF1B4BB8C /* HistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543B7250D4964D7612EF82E /* HistoryRow.swift */; };
+		697A7EF31BF162A4BF66B4F3 /* Date+Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626091F9C3F16170AD270F5 /* Date+Relative.swift */; };
+		6D60166644E3FA7E081AB7FA /* IPGeolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B51FE212D05B07A48A2B65F /* IPGeolocation.swift */; };
+		8DFAA0BF1212A5EFC5BFD273 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDEA02C334CDF817D02D93 /* ContentView.swift */; };
+		8F8A67D95CCA155CA7DB05EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AB7BC60056FEF2230FD86D4 /* Assets.xcassets */; };
+		901B2E75D658FA584682BF62 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 8CBEA1758613CE34524AD06A /* PrivacyInfo.xcprivacy */; };
+		B173E431FD9E14822C7B2F8E /* SpeedTestEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2075AB513ED526FDB3388C63 /* SpeedTestEngine.swift */; };
+		CB58848EEE273E505DC14639 /* NetworkInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EFC1BF0A3081E34F85A3 /* NetworkInfoCard.swift */; };
+		DB4CDDFFFF8CB7484E6D93A1 /* SpeedTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B878C05FEBC9AC874F90F1B /* SpeedTestApp.swift */; };
+		E8D7787CFED8C4F28A37CBA3 /* SpeedTestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED01A55D7EADA3F60E5CCC81 /* SpeedTestResult.swift */; };
+		FB7FC97A5C0B6E245482D205 /* SpeedTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF68E94AABC6CA8EF93B8D3 /* SpeedTestViewModel.swift */; };
+		FC75FE6C3516AFD84FC3D384 /* SpeedGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1548E8409DC488972AEB76 /* SpeedGaugeView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1442DAABCB6067D2FB879C89 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		17B3F9FEB0A4BB65849797B4 /* SpeedTest.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SpeedTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B878C05FEBC9AC874F90F1B /* SpeedTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestApp.swift; sourceTree = "<group>"; };
+		2075AB513ED526FDB3388C63 /* SpeedTestEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestEngine.swift; sourceTree = "<group>"; };
+		2333AE7910DA23C2BC5C704B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3CAF58F28647A7E5DE615D67 /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
+		5543B7250D4964D7612EF82E /* HistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRow.swift; sourceTree = "<group>"; };
+		5626091F9C3F16170AD270F5 /* Date+Relative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Relative.swift"; sourceTree = "<group>"; };
+		7AB7BC60056FEF2230FD86D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7ECDEA02C334CDF817D02D93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8361E3F41B02380EE7BDDB27 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		83A4A1A3CC9C5D74A0EAC2F2 /* SpeedTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestView.swift; sourceTree = "<group>"; };
+		8B51FE212D05B07A48A2B65F /* IPGeolocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPGeolocation.swift; sourceTree = "<group>"; };
+		8CBEA1758613CE34524AD06A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		C516EFC1BF0A3081E34F85A3 /* NetworkInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfoCard.swift; sourceTree = "<group>"; };
+		CFF68E94AABC6CA8EF93B8D3 /* SpeedTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestViewModel.swift; sourceTree = "<group>"; };
+		DD1548E8409DC488972AEB76 /* SpeedGaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedGaugeView.swift; sourceTree = "<group>"; };
+		ED01A55D7EADA3F60E5CCC81 /* SpeedTestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestResult.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		22EE7D093D750A94F497C0DD /* History */ = {
+			isa = PBXGroup;
+			children = (
+				5543B7250D4964D7612EF82E /* HistoryRow.swift */,
+				8361E3F41B02380EE7BDDB27 /* HistoryView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		2FDFC6DAEF60E9F16DF25C4B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CFF68E94AABC6CA8EF93B8D3 /* SpeedTestViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4C9EC62D49BFF9EFFB84F4DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED01A55D7EADA3F60E5CCC81 /* SpeedTestResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		51645FEEE6584BFA1A61898C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7ECDEA02C334CDF817D02D93 /* ContentView.swift */,
+				1442DAABCB6067D2FB879C89 /* PrivacyPolicyView.swift */,
+				22EE7D093D750A94F497C0DD /* History */,
+				D21851938F2FA3A0C24E3DC8 /* SpeedTest */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		542503BCC2E95FBDC4033F36 = {
+			isa = PBXGroup;
+			children = (
+				6039B396D4DDBB9EF2015A6D /* SpeedTest */,
+				6697B832116C6BA7A739D13D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6039B396D4DDBB9EF2015A6D /* SpeedTest */ = {
+			isa = PBXGroup;
+			children = (
+				7AB7BC60056FEF2230FD86D4 /* Assets.xcassets */,
+				2333AE7910DA23C2BC5C704B /* Info.plist */,
+				8CBEA1758613CE34524AD06A /* PrivacyInfo.xcprivacy */,
+				1B878C05FEBC9AC874F90F1B /* SpeedTestApp.swift */,
+				BC551CC826E510F194F69E9F /* Extensions */,
+				4C9EC62D49BFF9EFFB84F4DC /* Models */,
+				FEEB6B92061FCD3A6681528F /* Services */,
+				2FDFC6DAEF60E9F16DF25C4B /* ViewModels */,
+				51645FEEE6584BFA1A61898C /* Views */,
+			);
+			path = SpeedTest;
+			sourceTree = "<group>";
+		};
+		6697B832116C6BA7A739D13D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17B3F9FEB0A4BB65849797B4 /* SpeedTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC551CC826E510F194F69E9F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5626091F9C3F16170AD270F5 /* Date+Relative.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D21851938F2FA3A0C24E3DC8 /* SpeedTest */ = {
+			isa = PBXGroup;
+			children = (
+				C516EFC1BF0A3081E34F85A3 /* NetworkInfoCard.swift */,
+				DD1548E8409DC488972AEB76 /* SpeedGaugeView.swift */,
+				83A4A1A3CC9C5D74A0EAC2F2 /* SpeedTestView.swift */,
+			);
+			path = SpeedTest;
+			sourceTree = "<group>";
+		};
+		FEEB6B92061FCD3A6681528F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8B51FE212D05B07A48A2B65F /* IPGeolocation.swift */,
+				3CAF58F28647A7E5DE615D67 /* NetworkInfo.swift */,
+				2075AB513ED526FDB3388C63 /* SpeedTestEngine.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		130C0E427551AE844B7F6AA7 /* SpeedTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89426BB7BD497C9955D9EC94 /* Build configuration list for PBXNativeTarget "SpeedTest" */;
+			buildPhases = (
+				F652691F4F94DA188FCAF214 /* Sources */,
+				565BFE977B16A4EC6CA751FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpeedTest;
+			packageProductDependencies = (
+			);
+			productName = SpeedTest;
+			productReference = 17B3F9FEB0A4BB65849797B4 /* SpeedTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E392DF259D877596F8E52662 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					130C0E427551AE844B7F6AA7 = {
+						DevelopmentTeam = 8SBK293L6F;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3360514094A86916727A6358 /* Build configuration list for PBXProject "SpeedTest" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 542503BCC2E95FBDC4033F36;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6697B832116C6BA7A739D13D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				130C0E427551AE844B7F6AA7 /* SpeedTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		565BFE977B16A4EC6CA751FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F8A67D95CCA155CA7DB05EA /* Assets.xcassets in Resources */,
+				901B2E75D658FA584682BF62 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F652691F4F94DA188FCAF214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DFAA0BF1212A5EFC5BFD273 /* ContentView.swift in Sources */,
+				697A7EF31BF162A4BF66B4F3 /* Date+Relative.swift in Sources */,
+				66DE61F42E3522EEF1B4BB8C /* HistoryRow.swift in Sources */,
+				092EC1BCAEB135008CBD8B4E /* HistoryView.swift in Sources */,
+				6D60166644E3FA7E081AB7FA /* IPGeolocation.swift in Sources */,
+				251ABE423830BB8E4FADB0F3 /* NetworkInfo.swift in Sources */,
+				CB58848EEE273E505DC14639 /* NetworkInfoCard.swift in Sources */,
+				3F9A23A09E806CBFB12764D7 /* PrivacyPolicyView.swift in Sources */,
+				FC75FE6C3516AFD84FC3D384 /* SpeedGaugeView.swift in Sources */,
+				DB4CDDFFFF8CB7484E6D93A1 /* SpeedTestApp.swift in Sources */,
+				B173E431FD9E14822C7B2F8E /* SpeedTestEngine.swift in Sources */,
+				E8D7787CFED8C4F28A37CBA3 /* SpeedTestResult.swift in Sources */,
+				63D5A3359E652CAA380DAFCE /* SpeedTestView.swift in Sources */,
+				FB7FC97A5C0B6E245482D205 /* SpeedTestViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		23E8E5CD5D97CBC3AC5E4ED5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = SpeedTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.speedy.speedtest;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		7065DB12BD17C1CCEE115C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8SBK293L6F;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		D12EBDEDC62442AB00AB00C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8SBK293L6F;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		DF274A5300A5979E9659DB3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = SpeedTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.speedy.speedtest;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3360514094A86916727A6358 /* Build configuration list for PBXProject "SpeedTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7065DB12BD17C1CCEE115C6D /* Debug */,
+				D12EBDEDC62442AB00AB00C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		89426BB7BD497C9955D9EC94 /* Build configuration list for PBXNativeTarget "SpeedTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF274A5300A5979E9659DB3C /* Debug */,
+				23E8E5CD5D97CBC3AC5E4ED5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E392DF259D877596F8E52662 /* Project object */;
+}

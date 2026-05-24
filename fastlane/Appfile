@@ -1,4 +1,4 @@
-app_identifier("com.speedteststealth")
+app_identifier("com.speedy.speedtest")
 apple_id("aloewright@gmail.com")
 
 itc_team_id("93438877")   # App Store Connect vendor/team number
