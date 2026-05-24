@@ -14,7 +14,7 @@ ISSUER_ID     = ENV.fetch("APP_STORE_CONNECT_ISSUER_ID", "19f6fa40-e859-4234-a50
 platform :ios do
 
   before_all do |lane|
-    next unless [:certs, :build, :beta, :release].include?(lane)
+    next unless [:certs, :build, :beta, :release, :submit_existing].include?(lane)
 
     UI.user_error!("Missing App Store Connect API key at #{KEY_PATH}") unless File.exist?(KEY_PATH)
 
@@ -122,6 +122,43 @@ platform :ios do
       app_identifier:    BUNDLE_ID,
       metadata_path:     File.join(PROJECT_ROOT, "fastlane/metadata"),
       screenshots_path:  File.join(PROJECT_ROOT, "fastlane/screenshots"),
+      skip_screenshots:  false,
+      overwrite_screenshots: true,
+      submit_for_review: true,
+      automatic_release: false,
+      copyright:         "2026 Harborline",
+      force:             true,
+      precheck_include_in_app_purchases: false,
+      app_review_information: review_information,
+      submission_information: {
+        add_id_info_serves_ads: false,
+        add_id_info_tracks_action: false,
+        add_id_info_tracks_install: false,
+        add_id_info_uses_idfa: false,
+        content_rights_contains_third_party_content: false,
+        content_rights_has_rights: false,
+        export_compliance_uses_encryption: false
+      }
+    )
+  end
+
+  lane :submit_existing do
+    build_number = ENV.fetch("APP_STORE_BUILD_NUMBER", "4")
+    review_information = {
+      first_name: "Harborline",
+      last_name: "Support",
+      phone_number: ENV.fetch("APP_REVIEW_PHONE", "+14158515000"),
+      email_address: "help@pdx.software",
+      notes: "Speed Test Stealth does not require an account, subscription, or in-app purchase. To test: open the app, tap Start Test, wait for the download, upload, latency, and jitter measurements to complete, then open the History tab to confirm the result was saved locally. The app sends speed-test payload traffic to Cloudflare speed test endpoints and sends the public IP address to FreeIPAPI to show approximate ISP/location context. Saved history remains on device."
+    }
+
+    upload_to_app_store(
+      app:               APP_STORE_ID,
+      app_identifier:    BUNDLE_ID,
+      metadata_path:     File.join(PROJECT_ROOT, "fastlane/metadata"),
+      screenshots_path:  File.join(PROJECT_ROOT, "fastlane/screenshots"),
+      skip_binary_upload: true,
+      build_number:      build_number,
       skip_screenshots:  false,
       overwrite_screenshots: true,
       submit_for_review: true,
