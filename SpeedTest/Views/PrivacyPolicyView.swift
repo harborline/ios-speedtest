@@ -3,8 +3,8 @@ import SwiftUI
 struct PrivacyPolicyView: View {
     private let cloudflareURL = URL(string: "https://speed.cloudflare.com")!
     private let geolocationURL = URL(string: "https://freeipapi.com")!
-    private let supportURL = URL(string: "https://github.com/aloewright/SpeedTest-Native/issues")!
-    private let privacyURL = URL(string: "https://github.com/aloewright/SpeedTest-Native/blob/main/PRIVACY.md")!
+    private let supportURL = URL(string: "https://gist.github.com/aloewright/12e104c7c4060f1dea5625aa86b56c85#file-support-md")!
+    private let privacyURL = URL(string: "https://gist.github.com/aloewright/12e104c7c4060f1dea5625aa86b56c85#file-privacy-md")!
 
     var body: some View {
         NavigationStack {

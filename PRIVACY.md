@@ -28,4 +28,4 @@ These services receive network requests required for the app's core speed test a
 
 ## Support
 
-For support, open an issue at https://github.com/aloewright/SpeedTest-Native/issues.
+For support, email `help@pdx.software`.
