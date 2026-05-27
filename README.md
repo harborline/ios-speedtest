@@ -10,7 +10,7 @@ A precise, no-nonsense iOS network speed test. Measures download, upload, latenc
 [![SwiftData](https://img.shields.io/badge/SwiftData-✓-orange?logo=swift&logoColor=white)](https://developer.apple.com/xcode/swiftdata/)
 [![fastlane](https://img.shields.io/badge/fastlane-CI%2FCD-00F200?logo=fastlane&logoColor=black)](https://fastlane.tools)
 
-📱 **[Download on the App Store →](https://apps.apple.com/app/id6772637733)**
+📱 **![https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.sv](https://apps.apple.com/app/id6772637733)**
 
 <p align="center">
   <img src="fastlane/screenshots/en-US/iphone65-speed-test.png" alt="Speed Test Stealth running on iPhone" width="320">
